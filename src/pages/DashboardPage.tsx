@@ -139,7 +139,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         <StatCard icon={FileText} label="Total Estimates" value={estimates.length} color="#3b82f6" onClick={() => navigate("/estimates")} />
         <StatCard icon={CheckCircle2} label="Approved" value={approved.length} color="#10b981" onClick={() => navigate("/estimates")} />
         <StatCard icon={Clock} label="Pending" value={pending.length} sub="Awaiting adjuster" color="#f59e0b" onClick={() => navigate("/crm/projects")} />
@@ -150,7 +150,7 @@ export default function DashboardPage() {
       {/* Workflow Steps - ALL CLICKABLE */}
       <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-6 text-white">
         <h3 className="font-bold text-lg mb-3">Xactimate Workflow — CRM Integrated</h3>
-        <div className="grid grid-cols-7 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2">
           {workflowSteps.map((step, i) => (
             <div
               key={step.s}
@@ -172,7 +172,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Actions Row */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <button onClick={() => window.open("/estimate", "_blank")} className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition text-left group">
           <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center group-hover:bg-orange-100 transition">
             <Zap className="w-5 h-5 text-orange-600" />

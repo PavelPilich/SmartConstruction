@@ -52,7 +52,7 @@ export default function SubTimesheetsPage() {
       </div>
 
       {/* Weekly Summary */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3">
         <div className="bg-white rounded-xl border p-4 text-center"><div className="text-2xl font-bold text-gray-900">{totalHours}</div><div className="text-xs text-gray-500">Total Hours</div></div>
         <div className="bg-white rounded-xl border p-4 text-center"><div className="text-2xl font-bold text-blue-600">{totalCrewHours}</div><div className="text-xs text-gray-500">Crew-Hours</div></div>
         <div className="bg-white rounded-xl border p-4 text-center"><div className="text-2xl font-bold text-gray-900">{projectsWorked}</div><div className="text-xs text-gray-500">Projects Worked</div></div>

@@ -52,7 +52,7 @@ export default function SubPaymentsPage() {
         <Btn color="#3b82f6" variant="outline" onClick={handleExport}><Download className="w-4 h-4 mr-1 inline" />Export History</Btn>
       </div>
 
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3">
         <StatCard icon={DollarSign} label="YTD Earnings" value={`$${ytd.toLocaleString()}`} color="#10b981" />
         <StatCard icon={Clock} label="Pending" value={`$${pending.toLocaleString()}`} sub={`${payments.filter((p) => p.status !== "Paid").length} payments`} color="#f59e0b" />
         <StatCard icon={CheckCircle2} label="Last Payment" value={lastPayment ? `$${lastPayment.amount.toLocaleString()}` : "—"} sub={lastPayment?.date || ""} color="#3b82f6" />

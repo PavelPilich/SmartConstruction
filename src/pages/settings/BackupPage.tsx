@@ -256,7 +256,7 @@ export default function BackupPage() {
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <StatCard icon={Database} label="Total Backups" value={87} sub="Since Dec 2025" color="#3b82f6" />
         <StatCard icon={HardDrive} label="Storage Used" value="2.4 GB" sub="of 10 GB" color="#8b5cf6" />
         <StatCard icon={Clock} label="Last Backup" value="3 hrs ago" sub="Auto — Success" color="#059669" />

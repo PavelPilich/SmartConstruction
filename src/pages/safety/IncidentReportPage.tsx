@@ -298,7 +298,7 @@ export default function IncidentReportPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         <StatCard icon={AlertTriangle} label="Total Incidents (YTD)" value={incidents.length} color="#ef4444" />
         <StatCard icon={XCircle} label="Open" value={openCount} color="#ef4444" />
         <StatCard icon={Eye} label="Under Investigation" value={investigatingCount} color="#eab308" />

@@ -181,7 +181,7 @@ export default function ContractsPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         <StatCard icon={FileText} label="Total Contracts" value={counts.total} color="#3b82f6" />
         <StatCard icon={Edit3} label="Drafts" value={counts.draft} color="#6b7280" />
         <StatCard icon={Send} label="Sent for Signing" value={counts.sent} color="#3b82f6" />

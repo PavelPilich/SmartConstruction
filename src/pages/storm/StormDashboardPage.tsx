@@ -586,7 +586,7 @@ export default function StormDashboardPage() {
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <StatCard icon={AlertTriangle} label="Active Alerts" value={activeAlerts.length} color="#ef4444" />
         <StatCard icon={CloudLightning} label="Storms This Month" value={7} color="#f97316" />
         <StatCard icon={Cloud} label="Hail Events" value={3} sub="This month" color="#eab308" />

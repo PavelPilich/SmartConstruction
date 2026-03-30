@@ -146,7 +146,7 @@ export default function TrainingDashboardPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         <StatCard icon={BookOpen} label="Total Modules" value={modules.length} color="#3b82f6" />
         <StatCard icon={CheckCircle2} label="Completed" value={completed} color="#10b981" />
         <StatCard icon={PlayCircle} label="In Progress" value={inProgress} color="#f59e0b" />

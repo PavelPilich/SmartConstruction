@@ -11,7 +11,7 @@ export function StatCard({ icon: Icon, label, value, sub, color = "#3b82f6", onC
           <Icon className="w-5 h-5" style={{ color }} />
         </div>
       </div>
-      <div className="text-2xl font-bold text-gray-900">{value}</div>
+      <div className="text-lg sm:text-2xl font-bold text-gray-900 truncate">{value}</div>
       {sub && <div className="text-xs text-gray-500 mt-0.5">{sub}</div>}
     </div>
   );

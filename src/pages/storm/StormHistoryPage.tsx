@@ -189,7 +189,7 @@ export default function StormHistoryPage() {
       </div>
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <div className="text-xs text-gray-500 font-medium">Total Storms</div>
           <div className="text-2xl font-bold text-gray-900 mt-1">{stormList.length}</div>

@@ -244,7 +244,7 @@ export default function EmployeeRatingsPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         <StatCard icon={Star} label="Avg Rating" value={`${avgAll}/5`} color="#eab308" />
         <StatCard icon={MessageSquare} label="Reviews This Month" value={employees.reduce((s, e) => s + e.reviews, 0)} color="#3b82f6" />
         <StatCard icon={Trophy} label="Top Performer" value={sorted[0]?.name || "—"} color="#22c55e" />

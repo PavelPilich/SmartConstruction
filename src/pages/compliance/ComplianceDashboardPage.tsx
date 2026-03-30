@@ -318,7 +318,7 @@ export default function ComplianceDashboardPage() {
       {auditResult && (
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
           <h3 className="font-bold text-blue-900 text-sm mb-2 flex items-center gap-1.5"><ShieldCheck className="w-4 h-4" /> Audit Complete</h3>
-          <div className="grid grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center">
             <div><div className="text-2xl font-bold text-blue-700">{auditResult.total}</div><div className="text-xs text-gray-500">Personnel</div></div>
             <div><div className="text-2xl font-bold text-blue-700">{auditResult.docs}</div><div className="text-xs text-gray-500">Docs Checked</div></div>
             <div><div className="text-2xl font-bold text-green-600">{auditResult.pct}%</div><div className="text-xs text-gray-500">Compliant</div></div>
@@ -651,7 +651,7 @@ export default function ComplianceDashboardPage() {
             <span className="flex items-center gap-1.5"><Zap className={`w-4 h-4 ${auditRunning ? "animate-spin" : ""}`} /> Run Audit Now</span>
           </Btn>
           {auditResult && (
-            <div className="mt-3 grid grid-cols-4 gap-3 text-center">
+            <div className="mt-3 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 text-center">
               <div className="bg-white rounded-lg p-2 border border-gray-200">
                 <div className="text-lg font-bold text-gray-900">{auditResult.total}</div>
                 <div className="text-[10px] text-gray-500">Personnel</div>

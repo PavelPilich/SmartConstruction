@@ -209,7 +209,7 @@ export default function SafetyChecklistPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         <StatCard icon={CheckCircle2} label="Completed Today" value={completedToday} color="#22c55e" />
         <StatCard icon={ClipboardCheck} label="This Week" value={22} color="#3b82f6" />
         <StatCard icon={ClipboardCheck} label="Compliance Rate" value={`${complianceRate}%`} color="#8b5cf6" />

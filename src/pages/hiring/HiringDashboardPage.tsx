@@ -278,7 +278,7 @@ export default function HiringDashboardPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         <StatCard icon={Briefcase} label="Open Positions" value={openCount} color="#7c3aed" />
         <StatCard icon={Users} label="Total Applications" value={totalApps} color="#3b82f6" />
         <StatCard icon={Star} label="Strong Candidates" value={8} color="#10b981" />

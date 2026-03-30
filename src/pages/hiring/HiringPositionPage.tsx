@@ -499,7 +499,7 @@ export default function HiringPositionPage() {
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-4 gap-4 mt-4 pt-4 border-t border-gray-100">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-4 pt-4 border-t border-gray-100">
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">{candidates.length}</div>
             <div className="text-xs text-gray-500">Applications</div>

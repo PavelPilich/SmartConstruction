@@ -557,7 +557,7 @@ export default function AiToolsPage() {
       </div>
 
       {/* Stat Cards */}
-      <div className="grid grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
         <StatCard icon={Camera} label="Photos Analyzed" value="1,247" sub="This month" color="#3b82f6" />
         <StatCard icon={Shield} label="Claims Prepared" value="89" sub="$2.1M recovered" color="#22c55e" />
         <StatCard icon={Calculator} label="Materials Calculated" value="342" sub="$890K ordered" color="#a855f7" />

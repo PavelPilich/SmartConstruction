@@ -346,7 +346,7 @@ export default function CareersPage() {
       </div>
 
       {/* Company highlights */}
-      <div className="grid grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10">
         <div className="bg-white rounded-xl border border-gray-200 p-5 text-center hover:shadow-md transition">
           <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
           <div className="text-2xl font-bold text-gray-900">24</div>
