@@ -147,20 +147,20 @@ const navSections = [
   },
 ];
 
-export function Sidebar() {
+export function Sidebar({ open, onClose }: { open?: boolean; onClose?: () => void }) {
   const estimates = useAppStore((s) => s.estimates);
   const { registrants } = useRegistrationStore();
   const totalRegistrants = registrants.length;
   const blockedCount = registrants.filter((r) => r.status === "blocked").length;
 
   return (
-    <aside className="w-56 bg-gray-900 text-white flex flex-col flex-shrink-0">
+    <aside className={`fixed inset-y-0 left-0 z-40 w-56 bg-gray-900 text-white flex flex-col flex-shrink-0 transform transition-transform duration-200 md:relative md:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="p-4 border-b border-gray-800">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-xs font-black">SC</div>
           <div>
             <div className="font-bold text-sm leading-tight">Smart Construction &amp; Remodeling Inc</div>
-            <div className="text-gray-400 text-xs">Full AI-Integrated Platform</div>
+            <div className="text-gray-400 text-xs leading-tight">Full AI-Integrated Construction Management CRM System</div>
           </div>
         </div>
         <div className="flex items-center gap-1.5 mt-3">

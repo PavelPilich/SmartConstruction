@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { HelpCircle, BookOpen, PlayCircle, X } from "lucide-react";
+import { HelpCircle, BookOpen, PlayCircle, X } Menu, } from "lucide-react";
 import { Badge } from "../ui/Badge";
 
 const pageTitles: Record<string, string> = {
@@ -107,7 +107,7 @@ const pageToTrainingModule: Record<string, string> = {
   "/settings/backup": "settings",
 };
 
-export function Header() {
+export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   const { pathname } = useLocation();
   const nav = useNavigate();
   const [helpOpen, setHelpOpen] = useState(false);
@@ -119,7 +119,8 @@ export function Header() {
 
   return (
     <header className="bg-white border-b px-5 py-3 flex items-center justify-between flex-shrink-0">
-      <div className="flex items-center gap-3">
+        <button onClick={onMenuClick} className="md:hidden p-2 mr-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100"><Menu className="w-5 h-5" /></button>
+        <div className="flex items-center gap-3">
         <span className="font-bold text-gray-900">{title}</span>
         <Badge color="#10b981">Xactimate API</Badge>
         <Badge color="#3b82f6" sm>CRM Linked</Badge>

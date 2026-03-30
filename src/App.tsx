@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState } from "react";
 import { Sidebar } from "./components/layout/Sidebar";
 import { Header } from "./components/layout/Header";
 import PublicLayout from "./components/layout/PublicLayout";
@@ -78,12 +78,14 @@ function LazyFallback() {
 }
 
 function AdminLayout() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden" style={{ fontFamily: "'Inter',-apple-system,sans-serif" }}>
-      <Sidebar />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      {sidebarOpen && <div className="fixed inset-0 bg-black/50 z-30 md:hidden" onClick={() => setSidebarOpen(false)} />}
       <main className="flex-1 flex flex-col overflow-hidden">
-        <Header />
-        <div className="flex-1 overflow-y-auto p-5">
+        <Header onMenuClick={() => setSidebarOpen(true)} />
+        <div className="flex-1 overflow-y-auto p-3 sm:p-5">
           <Suspense fallback={<LazyFallback />}>
             <Routes>
               <Route path="/" element={<DashboardPage />} />
